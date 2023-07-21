@@ -1,15 +1,15 @@
-@export "./abstract/mixins";
-@export "./abstract/variables";
+@import "./abstract/mixins";
+@import "./abstract/variables";
 
-@export "./base/reset";
-@export "./base/typography";
+@import "./base/reset";
+@import "./base/typography";
 
-@export "./components/text";
-@export "./components/forminput";
-@export "./components/carousel";
-@export "./components/popup";
+@import "./components/text";
+@import "./components/forminput";
+@import "./components/carousel";
+@import "./components/popup";
 
-@export "./layout/container";
-@export "./layout/navbar";
+@import "./layout/container";
+@import "./layout/navbar";
 
-@export "./pages/index";
+@import "./pages/index";
