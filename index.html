@@ -1,0 +1,115 @@
+<!-- ---- Bismillah ---- -->
+<!-- ---- Wait a minute, I'll show you what it's like to not trust me 😌 ---- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ---- MIN CSS ---- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- ---- MAIN CSS ---- -->
+    <link rel="stylesheet" href="./src/style/css/style.css" />
+    <title>Yuristjonla :)</title>
+  </head>
+  <body>
+
+    <!-- ---- HEADER SECTION-START ---- -->
+
+    <header>
+      <nav id="navbar" class="nav">
+        <div class="container">
+          <button onclick="toggleNavbar()" class="nav__toggle">
+            <img src="./src/assets/icons/menu.svg" alt="menu" />
+          </button>
+          <div class="nav__logo--mobile">
+            <a href="./index.html"
+              ><img src="./src/assets/icons/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <div class="nav__btns">
+            <button onclick="toggleNavbar()">
+              <img src="./src/assets/icons/search.svg" alt="search" />
+            </button>
+            <button>
+              <img src="./src/assets/icons/user.svg" alt="user" />
+            </button>
+          </div>
+          <div id="nav__wrapper" class="nav__wrapper">
+            <div class="nav__top">
+              <div class="navbar__logo--desktop">
+                <a href="./index.html"
+                  ><img src="./src/assets/icons/logo.svg" alt="logo"
+                /></a>
+              </div>
+              <div class="nav__form">
+                <div class="nav__form__search">
+                  <input
+                    type="text"
+                    id="search"
+                    class="nav__form__input"
+                    placeholder="Я хочу найти..."
+                  />
+                  <button type="submit" class="nav__form__button">
+                    <img src="./src/assets/icons/search.svg" alt="search" />
+                  </button>
+                </div>
+                <button
+                  onclick="openPopup('popup')"
+                  class="nav__form__question"
+                >
+                  <img src="./src/assets/icons/question.svg" alt="question" />
+                  <span>Задать вопрос</span>
+                </button>
+                <div class="nav__form__contact">
+                  <a href="tel:8 800 302-92-70">8 800 302-92-70</a>
+                  <span>Бесплатный звонок юристу 24/7</span>
+                </div>
+              </div>
+            </div>
+            <div class="nav__bottom">
+              <ul class="nav__bottom__list">
+                <li class="nav__bottom__list__item">
+                  <img src="./src/assets/icons/phone.svg" alt="phone" />
+                  <button>Заказать звонок</button>
+                </li>
+                <li class="nav__bottom__list__item">
+                  <img src="./src/assets/icons/telegram.svg" alt="telegram" />
+                  <button>Telegram</button>
+                </li>
+              </ul>
+              <ul class="nav__menus">
+                <li class="nav__menus__item">
+                  <a href="#">Отзывы</a>
+                </li>
+                <li class="nav__menus__item">
+                  <a href="#">Вопросы</a>
+                </li>
+                <li class="nav__menus__item">
+                  <a href="#">Наши юристы</a>
+                </li>
+                <li class="nav__menus__item">
+                  <a href="#">Статьи</a>
+                </li>
+                <li class="nav__menus__item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+              <button class="nav__login">
+                <img src="./src/assets/icons/user.svg" alt="login" />
+                <span>Вход / Регистрация</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ---- HEADER SECTION-END ---- -->
+
+    <script src="./src/scripts/main.js"></script>
+  </body>
+</html>

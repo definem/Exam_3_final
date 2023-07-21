@@ -1,0 +1,234 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixin;
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 40px 0;
+  transition: 0.3s;
+  &__toggle,
+  &__btns {
+    display: none;
+  }
+
+  &__logo--mobile {
+    display: none;
+  }
+  &__wrapper {
+    transition: 0.3s;
+  }
+  &__top {
+    width: 100%;
+    margin-bottom: 30px;
+    @include mixin.flex-box(row, space-between, center, 30px);
+  }
+  &__form {
+    @include mixin.flex-box(row, space-between, center, 30px);
+    flex-grow: 1;
+    &__search {
+      position: relative;
+      flex-grow: 1;
+    }
+    &__input {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 10px;
+      background: var.$gray-background;
+    }
+    &__input,
+    &__input::placeholder {
+      color: var.$gray-low;
+      font-family: OpenSansRegular;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    &__button {
+      position: absolute;
+      padding: 10px 20px;
+      border-radius: 10px;
+      top: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba(47, 43, 67, 0.1);
+      }
+    }
+    &__question {
+      display: flex;
+      padding: 14px 20px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 10px;
+      background: var.$green;
+      color: var.$base-white;
+      font-family: OpenSansRegular;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    &__contact {
+      @include mixin.flex-box(column, start, start, 5px);
+      a {
+        color: var.$base-black;
+        font-family: OpenSansBold;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      span {
+        color: var.$gray-medium;
+        font-family: OpenSansRegular;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+  &__bottom {
+    width: 100%;
+    @include mixin.flex-box(row, space-between, center, 0);
+    &__list {
+      @include mixin.flex-box(row, center, center, 15px);
+      &__item {
+        @include mixin.flex-box(row, center, center, 10px);
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid var.$gray-borders;
+        * {
+          color: var.$base-black;
+          font-family: OpenSansRegular;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  &__menus {
+    @include mixin.flex-box(row, center, center, 30px);
+    &__item {
+      a {
+        color: var.$base-black;
+        font-family: OpenSansRegular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+  &__login {
+    display: flex;
+    padding: 14px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    color: var.$base-black;
+    font-family: OpenSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.active {
+  .nav__wrapper {
+    left: 0;
+  }
+}
+.navbar-shrink {
+  padding: 30px 0;
+  backdrop-filter: blur(400px) !important;
+  border-bottom: 1px solid #2f2b4326;
+}
+@media screen and (max-width: 1100px) {
+  .nav {
+    padding: 15px 0;
+    border-bottom: 1px solid #2f2b4326;
+    .container {
+      @include mixin.flex-box(row, space-between, center, 0);
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    &__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+    }
+    &__logo--mobile {
+      display: flex;
+      width: 179px;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &__wrapper {
+      position: absolute;
+      width: 450px;
+      height: 100vh;
+      top: 63.03px;
+      left: -100%;
+      padding: 50px;
+      z-index: 9999;
+      background: var.$base-white;
+      border-right: 1px solid #2f2b4326;
+    }
+    &__top,
+    &__form,
+    &__bottom,
+    &__menus {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__form {
+      width: 100%;
+      &__search,
+      &__question {
+        width: 100%;
+      }
+    }
+    &__bottom {
+      &__list {
+        width: 100%;
+        flex-direction: column;
+        &__item {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .nav {
+    .container {
+      gap: 10px;
+    }
+    &__wrapper {
+      width: 100%;
+      padding: 30px 15px;
+    }
+  }
+}
