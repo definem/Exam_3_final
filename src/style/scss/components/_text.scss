@@ -1,0 +1,35 @@
+.title {
+  color: var(--base-black, #140a32);
+  font-family: OpenSansBold;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 992px) {
+    font-size: 25px;
+    letter-spacing: -0.75px;
+  }
+  @media screen and (max-width: 644px) {
+    margin-bottom: 15px;
+    font-size: 20px;
+    letter-spacing: -0.6px;
+  }
+}
+.text {
+  color: var(--base-black, #140a32);
+  font-family: OpenSansRegular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 15px;
+  @media screen and (max-width: 992px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 644px) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
