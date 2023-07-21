@@ -1,15 +1,15 @@
-@use "./abstract/mixins";
-@use "./abstract/variables";
+@export "./abstract/mixins";
+@export "./abstract/variables";
 
-@use "./base/reset";
-@use "./base/typography";
+@export "./base/reset";
+@export "./base/typography";
 
-@use "./components/text";
-@use "./components/forminput";
-@use "./components/carousel";
-@use "./components/popup";
+@export "./components/text";
+@export "./components/forminput";
+@export "./components/carousel";
+@export "./components/popup";
 
-@use "./layout/container";
-@use "./layout/navbar";
+@export "./layout/container";
+@export "./layout/navbar";
 
-@use "./pages/index";
+@export "./pages/index";
