@@ -1,0 +1,33 @@
+.form__input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 7px 16px 8px 16px;
+  gap: 3px;
+  border-radius: 10px;
+  background: #fff;
+  span {
+    color: rgba(47, 43, 67, 0.4);
+    text-align: center;
+    font-family: OpenSansRegular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  input,
+  input::placeholder {
+    color: #140a32;
+    font-family: OpenSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 644px) {
+  .form__input{
+    width: 100%;
+  }
+}
