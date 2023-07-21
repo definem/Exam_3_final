@@ -1,4 +1,5 @@
 // < !-- ---- Bismillah ---- -- >
+// < !-- ---- Musyaa, u can do it, ut teacher believed u. look everything is gonna be okay :)) ---- -- >
 
 let navbar = document.getElementById("navbar");
 
